@@ -127,7 +127,7 @@ open class YouTubePlayerView: UIView, UIWebViewDelegate {
 
     fileprivate func buildWebView(_ parameters: [String: AnyObject]) {
         webView = UIWebView()
-        webView.allowsInlineMediaPlayback = true
+        webView.allowsInlineMediaPlayback = false
         webView.mediaPlaybackRequiresUserAction = false
         webView.delegate = self
         webView.scrollView.isScrollEnabled = false
