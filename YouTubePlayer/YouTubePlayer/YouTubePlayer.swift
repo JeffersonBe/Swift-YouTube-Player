@@ -269,10 +269,10 @@ open class YouTubePlayerView: UIView, UIWebViewDelegate {
 
         do {
             // Serialize to JSON string
-            let jsonData = try JSONSerialization.data(withJSONObject: object, options: JSONSerialization.WritingOptions.prettyPrinted)
+            let jsonData = try JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted])
 
             // Succeeded
-            return NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue) as String?
+            return String(data: jsonData, encoding: .utf8)
 
         } catch let jsonError {
 
